@@ -1,0 +1,760 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+body {
+  font-size: 100%;
+  font-family: Helvetica,STHeiti,Droid Sans Fallback;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+body, html{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.perspective {
+  margin:0 auto;
+  height:100%;
+}
+
+.load {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 100%;
+  background: #43812b;
+  z-index: 1000;
+}
+.loadImg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100px;
+    height: 100px;
+    margin: -50px 0 0 -50px;
+}
+
+.loadTxt {
+  width: 100px;
+  height: 50px;
+  margin: 0px auto;
+  line-height: 50px;
+  text-align: center;
+  color: #fff86b;
+  font-size: 25px;
+  font-family: Impact,Georgia,"Times New Roman", Times, serif;
+}
+
+.circle {
+    background-color: rgba(0,0,0,0);
+    border: 5px solid rgba(251,241,107,0.9);
+    opacity: .9;
+    border-right: 5px solid rgba(0,0,0,0);
+    border-left: 5px solid rgba(0,0,0,0);
+    border-radius: 50px;
+    box-shadow: 0 0 35px #fbf49c;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    -moz-animation: spinPulse 1s infinite ease-in-out;
+    -webkit-animation: spinPulse 1s infinite linear;
+}
+
+.circle1 {
+    background-color: rgba(0,0,0,0);
+    border: 5px solid rgba(251,241,107,1);
+    opacity: .9;
+    border-left: 5px solid rgba(0,0,0,0);
+    border-right: 5px solid rgba(0,0,0,0);
+    border-radius: 50px;
+    box-shadow: 0 0 15px #f4f0d1;
+    width: 30px;
+    height: 30px;
+    margin: 0 auto;
+    position: relative;
+    top: -50px;
+    -moz-animation: spinoffPulse 1s infinite linear;
+    -webkit-animation: spinoffPulse 1s infinite linear;
+}
+
+.global {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  /* overflow: hidden; */
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+}
+
+.screen {
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.ease {
+  -webkit-transition: all 1.0s ease-in-out;
+  transition: all 1.0s ease-in-out;
+}
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.layer {
+  position: relative;
+  overflow: hidden;
+}
+
+.global, .screen, .layer {
+  z-index: 1;
+}
+
+.layer1 {
+  position: relative;
+  background: url(http://mat1.gtimg.com/sports/worldcup2014/match/page_1.jpg) top center no-repeat;
+  background-size: cover;
+}
+
+.layer .inner {
+  width: 100%;
+  height: 100%;
+}
+
+.layer1 .hd {
+  padding: 10px 30px;
+  color: #9BC894;
+}
+
+.f12 {
+  font-size: 12px;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.cf:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.layer1 .bd {
+  position: absolute;
+  left: 0;
+  top: 7%;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+img {
+  display: inline-block;
+}
+
+.layer1 .animate .mofang {
+  opacity: 1;
+  animation: mofang 1.3s linear;
+  -webkit-animation: mofang 1.3s linear;
+}
+
+.layer1 .ft {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.layer1 .ft .btn {
+  position: relative;
+  height: 37px;
+  margin: 0 auto;
+  text-align: center;
+  color: #435d50;
+  font: 16px/32px "微软雅黑";
+}
+
+.layer1 .ft .btn1 {
+  background: url(http://mat1.gtimg.com/sports/worldcup2014/match/btn_1.png) top center no-repeat;
+  background-size: 222px 84px;
+}
+
+.layer1 .animate .btn {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: bounceIn;
+  animation-name: bounceIn;
+}
+
+.layer1 .animate .btn1 {
+  -webkit-animation-delay: 1.5s;
+}
+
+.layer1 .ft .btn2 {
+  background: url(http://mat1.gtimg.com/sports/worldcup2014/match/btn_2.png) top center no-repeat;
+  background-size: 277px 84px;
+}
+
+.layer1 .animate .btn2 {
+  -webkit-animation-delay: 1s;
+}
+
+.layer1 .ft .btn3 {
+  background: url(http://mat1.gtimg.com/sports/worldcup2014/match/btn_3.png) top center no-repeat;
+  background-size: 320px 84px;
+}
+
+.layer1 .animate .btn3 {
+  -webkit-animation-delay: 0.5s;
+}
+
+.layer1 .ft .btn4 {
+  background: url(http://mat1.gtimg.com/sports/worldcup2014/match/btn_4.png) top center no-repeat #AEE433;
+  background-size: 320px 84px;
+  color: #268f11;
+}
+
+.layer1 .animate .btn4 {
+  -webkit-animation-delay: 0s;
+}
+
+.layer1 .ft .btn:before {
+  position: absolute;
+  top: -9px;
+  left: 50%;
+  margin-left: 35px;
+  content: "";
+  width: 51px;
+  height: 12px;
+}
+
+.layer1 .ft .btn1:before {
+  background: url(http://mat1.gtimg.com/sports/worldcup2014/match/btn_arr_1.png) no-repeat;
+  background-size: 51px 12px;
+}
+
+.layer1 .ft .btn2:before {
+  background: url(http://mat1.gtimg.com/sports/worldcup2014/match/btn_arr_2.png) no-repeat;
+  background-size: 51px 12px;
+}
+
+.layer1 .ft .btn3:before {
+  background: url(http://mat1.gtimg.com/sports/worldcup2014/match/btn_arr_3.png) no-repeat;
+  background-size: 51px 12px;
+}
+
+.layer1 .ft .btn4:before {
+  background: url(http://mat1.gtimg.com/sports/worldcup2014/match/btn_arr_4.png) no-repeat;
+  background-size: 51px 12px;
+}
+
+.layer1 .animate .btnAnimate{
+    animation:btn 1s;
+    -webkit-animation:btn 1s;
+}
+
+@keyframes btn{
+    0%  {height:37px;}
+    50% {height:84px;}
+    100% {height:37px;}
+}
+
+@-webkit-keyframes btn{
+    0%  {height:37px;}
+    50% {height:84px;}
+    100% {height:37px;}
+}
+
+/* storyshdow*/
+.storyshdow {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 11;
+  background: rgba(0,0,0,0.5);
+}
+.storyshdow {
+  background: rgba(0,0,0,0.6);
+}
+.storydialog {
+  position: absolute;
+  left: 50%;
+  top: 50px;
+  width: 270px;
+  height: 308px;
+  margin: 0 0 0 -135px;
+  border-radius: 5px;
+  background-color: #fff;
+  opacity: 0;
+  z-index: -1;
+  -webkit-transform: translate3d(0,0,0);
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+}
+
+.storydialog {
+  width: 300px;
+  margin-left: -150px;
+  top: 100px;
+  border-radius: 0;
+  height: auto;
+}
+
+.storydialog {
+  left: 200%;
+}
+
+.dialog_index {
+  z-index: 12;
+}
+
+.opacity {
+  opacity: 1;
+}
+
+.dialog_index {
+  left: 50%;
+}
+.full_screen {
+  position: absolute;
+  margin-left: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  background-color: #78B245;
+  z-index: 12;
+  overflow: hidden;
+}
+
+.full_screen .link {
+  position: absolute;
+  left: 0;
+  top: 380px;
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+}
+
+.full_screen .close {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  width: 35px;
+  height: 35px;
+  background-color: #04A7DE;
+  background: url(http://mat1.gtimg.com/sports/worldcup2014/match/zh_close.png) no-repeat;
+  background-size: 35px 35px;
+}
+
+.bounceIn {
+  -webkit-animation-name: bounceIn;
+  animation-name: bounceIn;
+}
+
+@-moz-keyframes spinPulse {
+  0% { -moz-transform:rotate(160deg); opacity:0; box-shadow:0 0 1px #2187e7;}
+  50% { -moz-transform:rotate(145deg); opacity:1; }
+  100% { -moz-transform:rotate(-320deg); opacity:0; }
+}
+@-moz-keyframes spinoffPulse {
+  0% { -moz-transform:rotate(0deg); }
+  100% { -moz-transform:rotate(360deg);  }
+}
+@-webkit-keyframes spinPulse {
+  0% { -webkit-transform:rotate(160deg); opacity:0; box-shadow:0 0 1px #2187e7; }
+  50% { -webkit-transform:rotate(145deg); opacity:1;}
+  100% { -webkit-transform:rotate(-320deg); opacity:0; }
+}
+@-webkit-keyframes spinoffPulse {
+  0% { -webkit-transform:rotate(0deg); }
+  100% { -webkit-transform:rotate(360deg); }
+}
+
+@-webkit-keyframes mofang {
+    0%,
+    50% { -webkit-transform: scale(0);opacity: 0.5;}
+    70% { -webkit-transform: scale(1.5);opacity: 0.8;}
+    80% { -webkit-transform: scale(0.8) rotate(180);opacity: 1;}
+    100% { -webkit-transform: scale(1.2);}
+}
+
+@-webkit-keyframes bounceIn {
+0% {
+  opacity: 0;
+  -webkit-transform: scale(.3);
+  transform: scale(.3);
+}
+
+50% {
+  opacity: 1;
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+70% {
+  -webkit-transform: scale(.9);
+  transform: scale(.9);
+}
+
+100% {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+}
+
+@keyframes bounceIn {
+0% {
+  opacity: 0;
+  -webkit-transform: scale(.3);
+  -ms-transform: scale(.3);
+  transform: scale(.3);
+}
+
+50% {
+  opacity: 1;
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+70% {
+  -webkit-transform: scale(.9);
+  -ms-transform: scale(.9);
+  transform: scale(.9);
+}
+
+100% {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+}
+
+@-webkit-keyframes bounceIn {
+0% {
+opacity: 0;
+-webkit-transform: scale(.3);
+transform: scale(.3);
+}
+
+50% {
+opacity: 1;
+-webkit-transform: scale(1.05);
+transform: scale(1.05);
+}
+
+70% {
+-webkit-transform: scale(.9);
+transform: scale(.9);
+}
+
+100% {
+opacity: 1;
+-webkit-transform: scale(1);
+transform: scale(1);
+}
+}
+
+@keyframes bounceIn {
+0% {
+opacity: 0;
+-webkit-transform: scale(.3);
+-ms-transform: scale(.3);
+transform: scale(.3);
+}
+
+50% {
+opacity: 1;
+-webkit-transform: scale(1.05);
+-ms-transform: scale(1.05);
+transform: scale(1.05);
+}
+
+70% {
+-webkit-transform: scale(.9);
+-ms-transform: scale(.9);
+transform: scale(.9);
+}
+
+100% {
+opacity: 1;
+-webkit-transform: scale(1);
+-ms-transform: scale(1);
+transform: scale(1);
+}
+}
+
+.screen_x90 {
+  -webkit-transform: rotateY(0deg) rotateX(90deg);
+  transform: rotateY(0deg) rotateX(90deg);
+}
+
+.layer2{
+background-color: #f9ffe7;
+position: relative;
+}
+
+.hd_bd {
+  border-width: 30px 15px 0 15px;
+  border-style: solid;
+  position: relative;
+  text-align: center;
+  line-height: 30px;
+  position: relative;
+  z-index: 2;
+}
+
+.layer2 .hd_bd {
+  color: #435d50;
+  border-color: #FFF transparent transparent transparent;
+}
+
+.layer2 .hd_bd {
+  border-color: #FFF #55b852 #55b852 #55b852;
+  border-width: 30px 15px 8px 15px;
+}
+
+.hd_bd .tit {
+  color: #435d50;
+  font-size: 18px;
+  position: absolute;
+  width: 100%;
+  top: -30px;
+  left: 0;
+}
+#js_tab_menu {
+  background-color: #55b852;
+  height: 30px;
+  border-bottom: 4px solid #faf848;
+  padding: 0 9px 0 14px;
+}
+
+#js_tab_menu li {
+  display: block;
+  float: left;
+  height: 30px;
+  text-align: center;
+  width: 25%;
+  position: relative;
+}
+
+#js_tab_menu li span {
+  position: absolute;
+  display: block;
+  height: 30px;
+  font-size: 18px;
+  color: #fff;
+  line-height: 30px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 34px;
+}
+
+#js_tab_menu .on span {
+  background: url(http://mat1.gtimg.com/sports/worldcup2014/match/tab_on.png) no-repeat;
+  background-size: 100% 100%;
+  color: #117d0e;
+}
+
+#js_tab_contents .conitem {
+  display: none;
+  position: absolute;
+  padding-top: 19px;
+  top: 72px;
+  bottom: 35px;
+  width: 100%;
+}
+
+#wrap_box, #wrap_box_2 {
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+#scroller_1, #scroller_2 {
+  padding: 20px 0;
+  position: absolute;
+  z-index: 1;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  width: 100%;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  -o-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+#js_tab_contents .bg {
+  width: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+#js_tab_contents .one .bg {
+  height: 747px;
+}
+
+.layer2 .item {
+  float: left;
+  width: 33%;
+  height: 25%;
+  text-align: center;
+  color: #3C3C3C;
+}
+
+.conitem .item {
+  height: 70px;
+  width: 231px;
+  border: 1px solid #ecf6cd;
+  background-color: #fff;
+  margin-left: 17px;
+}
+
+.layer2 .animate .item {
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: flag;
+  animation-name: flag;
+}
+
+@-webkit-keyframes flag{
+  0%{-webkit-transform:scale(0);}
+  100%{-webkit-transform:scale(1);}
+}
+@keyframes flag{
+  0%{-webkit-transform:scale(0);}
+  100%{-webkit-transform:scale(1);}
+}
+
+.conitem .item .num {
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 25px;
+  left: -7px;
+  background-color: #55b852;
+  color: #fff;
+  font: 15px/20px'Arial';
+}
+.country_list {
+  display: block;
+  padding-left: 22px;
+  float: left;
+  padding-top: 4px;
+  width: 118px;
+}
+.country_list li {
+  height: 30px;
+  line-height: 30px;
+  text-align: left;
+}
+.country_list li span {
+  color: #435d50;
+}
+
+.country_list .flag {
+  display: inline-block;
+  height: 17px;
+  width: 17px;
+  float: left;
+  margin: 3px 8px 0 0;
+}
+
+.country_list .flag img {
+  height: 17px;
+  width: 17px;
+}
+
+.country_list .score {
+  float: right;
+}
+
+.country_list .first .score {
+  color: #39a436;
+}
+
+.conitem .item .des {
+  float: right;
+  width: 70px;
+  margin-right: 20px;
+  padding-top: 5px;
+}
+.conitem .item .state {
+  display: inline-block;
+  background-color: #a5a5a5;
+  color: #fff;
+}
+.conitem .not_start .state {
+  background-color: #55b852;
+}
+
+.mt25 {
+  margin-top: 25px;
+}
+
+.mt36 {
+  margin-top: 36px;
+}
+
+#js_tab_contents .two .bg{
+width: auto;
+position: absolute;
+top: 0;
+right: 0;
+}
+
+#js_tab_contents .three .bg {
+  height: 150px;
+}
+
+#js_tab_contents .four .bg {
+  height: 171px;
+}
